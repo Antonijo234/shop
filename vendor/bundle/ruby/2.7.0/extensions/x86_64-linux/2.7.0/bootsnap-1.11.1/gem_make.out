@@ -1,0 +1,15 @@
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+/home/toni/.rvm/rubies/ruby-2.7.2/bin/ruby -I /home/toni/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20220508-5799-1c7hiro.rb extconf.rb
+creating Makefile
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20220508-5799-19ylkl9/bootsnap

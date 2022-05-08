@@ -1,0 +1,17 @@
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+/home/toni/.rvm/rubies/ruby-2.7.2/bin/ruby -I /home/toni/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20220508-5799-60hqin.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/toni/Desktop/ruby/shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cparse.so ./.gem.20220508-5799-13054xl/racc
