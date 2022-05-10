@@ -19,10 +19,10 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'simple_form'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
-
+gem "mini_magick"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
-
+gem 'image_processing', '~> 1.2'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 

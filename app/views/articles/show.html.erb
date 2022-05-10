@@ -1,3 +1,4 @@
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @article %>
@@ -8,3 +9,12 @@
 
   <%= button_to "Destroy this article", @article, method: :delete %>
 </div>
+
+
+<div>
+<% @article.upload.each do |upload|%>
+<% if upload.image?%>
+<%=link_to image_tag(upload, width:400), upload %>
+<%end%>
+<%end%>
+  </div>
