@@ -1,44 +1,69 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" <%=link_to "Simple shop", root_path%>></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" <%=link_to "Articles", pages_ads_path%>></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" <%=link_to "Contact Us", pages_contact_path%>></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" <%=link_to "About Us", pages_about_path%>></a>
-        </li>
-
-
-
-
-
-
-
-
-        <li class="nav-item">
-          <a class="nav-link" <%=link_to "Sign up", new_user_registration_path%>></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" <%=link_to "Sign in", new_user_session_path%>></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
-        </li>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<div class="container-fluid">
+  <%=link_to "Simple shop", root_path, class:'navbar-brand'%>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
 
       </ul>
-    </div>
+
+
+
+      <ul class="nav justify-content-end">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+          <li class="nav-item">
+            <a class="nav-link active" <%=link_to "Articles", pages_ads_path%></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" <%=link_to "Contact Us", pages_contact_path%></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" <%=link_to "About Us", pages_about_path%></a>
+          </li>
+
+
+
+<% if !current_user%>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Sign up", new_user_registration_path%></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Sign in", new_user_session_path %></a>
+      </li>
+<% end %>
+
+
+
+
+<% if current_user%>
+
+          <li class="nav-item">
+            <a class="nav-link" <%= link_to "Edit my profile", edit_user_registration_path%></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
+          </li>
+
+
+    </ul>
+<% end %>
   </div>
+</div>
 </nav>
