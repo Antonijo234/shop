@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
-  <% end %>
+<div class="row">
+<!-- Blog article Content Column -->
+<div class="col-lg-8">
+<% @articles.each do |article| %>
+<!-- Blog article -->
+<!-- Title -->
+<h4 style="font-size: 45.5px;"><%= link_to article.title, article %></h4>
+<!-- Date/Time -->
+<p><span class="glyphicon glyphicon-time"></span>
+</p>
+<!-- Author -->
+<p>
+Article created By:<strong> <%= article.user.username %></strong>
+</p>
+<hr>
+<!-- articleed Comments -->
+<!-- Comment -->
+<% end %>
+<%= link_to "New article", new_article_path, class: "btn btn-default btn-xs" %>
 </div>
-
-<%= link_to "New article", new_article_path %>
+<!-- Blog Sidebar Widgets Column -->
+</div>
+<br>
