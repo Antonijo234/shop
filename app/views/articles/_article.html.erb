@@ -1,17 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><strong>Title:</strong></th>
+      <th scope="col"><strong>Created by:</strong></th>
+      <th scope="col">Body:</th>
 
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
 
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
-  <p>
-    <strong>Created by:</strong>
-    <%= article.user.username %>
-  </p>
-  <p>
-    <strong>Body:</strong>
-    <%= article.body %>
-  </p>
+        <td><%= article.title %></td>
+        <td><%= article.user.username %></td>
+        <td><%= article.body %></td>
+      </tr>
 
-</div>
+    </tbody>
+</table>
